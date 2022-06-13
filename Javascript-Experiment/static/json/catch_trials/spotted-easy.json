@@ -1,0 +1,40 @@
+[
+
+  {"action_context":
+    [
+      [{"color": "Blue", "texture": "Solid"}, {"color": "Green", "texture": "Spotted"}, {"color": "Red", "texture": "Striped"}]
+    ],
+    "features": ["Spotted"],
+    "values": [1],
+    "trial_type": "button",
+    "belief": true,
+    "utility": true
+  },
+
+  {"action_context": [
+    [{"color": "Blue", "texture": "Striped"}, {"color": "Blue", "texture": "Solid"}, {"color": "Red", "texture": "Spotted"}]
+  ],
+    "features": ["Spotted"],
+    "values": [1],
+    "trial_type": "button",
+    "belief": true,
+    "utility": true},
+
+    {"action_context": [
+    [{"color": "Blue", "texture": "Solid"}, {"color": "Green", "texture": "Spotted"}, {"color": "Green", "texture": "Striped"}]
+  ],
+    "features": ["Spotted"],
+    "values": [-1],
+    "trial_type": "button",
+    "belief": false,
+    "utility": false},
+
+  {"action_context": [
+    [{"color": "Blue", "texture": "Striped"}, {"color": "Green", "texture": "Spotted"}, {"color": "Red", "texture": "Solid"}]
+  ],
+    "features": ["Spotted"],
+    "values": [-1],
+    "trial_type": "button",
+    "belief": false,
+    "utility": false}
+]

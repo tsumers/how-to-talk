@@ -1,0 +1,39 @@
+[
+
+  {"action_context":
+    [
+      [{"color": "Blue", "texture": "Striped"}, {"color": "Green", "texture": "Solid"}, {"color": "Red", "texture": "Striped"}]
+    ],
+    "features": ["Solid"],
+    "values": [1],
+    "trial_type": "button",
+    "belief": false,
+    "utility": true},
+
+  {"action_context": [
+    [{"color": "Blue", "texture": "Solid"}, {"color": "Green", "texture": "Spotted"}, {"color": "Red", "texture": "Solid"}]
+  ],
+    "features": ["Solid"],
+    "values": [-1],
+    "trial_type": "button",
+    "belief": false,
+    "utility": true},
+
+    {"action_context": [
+      [{"color": "Blue", "texture": "Striped"}, {"color": "Red", "texture": "Striped"}, {"color": "Red", "texture": "Solid"}]
+  ],
+    "features": ["Solid"],
+    "values": [1],
+    "trial_type": "button",
+    "belief": false,
+    "utility": true},
+
+  {"action_context": [
+    [{"color": "Green", "texture": "Spotted"}, {"color": "Green", "texture": "Solid"}, {"color": "Red", "texture": "Solid"}]
+  ],
+    "features": ["Solid"],
+    "values": [-1],
+    "trial_type": "button",
+    "belief": false,
+    "utility": true}
+]

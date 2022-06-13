@@ -1,0 +1,258 @@
+
+#timer {
+  font-size: 20pt;
+  font-weight: bold;
+  text-align: center;
+}
+
+#jspsych-target {
+  max-width: 800px;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.center {
+  text-align: center;
+}
+
+.left {
+  display: block;
+  float: left;
+}
+
+.right {
+  display: block;
+  float: right;
+}
+
+/* Intro Styling */
+
+.forest-background-image {
+    background-image: url("/static/images/fungal-forest.jpg"); /* The image used */
+    background-color: #cccccc; /* Used if the image is unavailable */
+    height: 500px; /* You must set a specified height */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+img.centered {
+  display: block;
+  margin-left: auto; 
+  margin-right: auto
+}
+
+.flex-person-wrap{
+    padding:  20px 0;
+    margin:  0 auto;
+    display:  flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items:  center;
+    gap:  12px;
+}
+
+/* Mushroom Stimulus */
+.flex-mushroom-wrap{
+    padding:  10px 0;
+    /*border:  5px solid black;*/
+    margin:  0 auto;
+    display:  flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items:  center;
+    gap:  12px;
+}
+
+.flex-mushroom-patch{
+    border:  4px solid black;
+    background:  #C4A484;
+    width:  350px;
+    height:  120px;
+    display: inline-flex;
+    justify-content:  space-between;
+}
+
+.tripartite {
+    height: 80px;
+    padding:  2px;
+    display: inline-block;
+    font-size: 10pt;
+    margin:  0 auto;
+}
+
+.fontsize12 {
+    display: inline-block;
+    font-size: 12pt;
+}
+
+.body-text {
+  max-width: 800px;
+}
+
+.alert {
+  max-width: 800px;
+  margin: auto;
+  margin-top: 50px;
+}
+
+.display-flex-center {
+    display:flex;
+    align-items:center;
+}
+
+/* Center the loader */
+#load-icon {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 150px;
+  height: 150px;
+  margin: -75px 0 0 -75px;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Add animation to "page content" */
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+  from { bottom:-40px; opacity:0 } 
+  to { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom { 
+  from{ bottom:-40px; opacity:0 } 
+  to{ bottom:0; opacity:1 }
+}
+
+#success-load {
+  display: none;
+  text-align: center;
+}
+
+
+/********************************************************************/
+/* Generic element styles                                           */
+/********************************************************************/
+
+body {
+    padding:0px;
+    margin: 0px;
+    background-color: white;
+    color: black;
+    font-weight: 300;
+    font-size: 14pt;
+}
+
+h1 {
+    margin-top: 0px;
+}
+
+
+/* text styling */
+strong {
+  font-weight: 600;
+}
+
+ul {
+    margin: 0;
+}
+
+ol.insructions > li {
+    margin: 1em 0;
+}
+
+.warm {
+  color: steelblue;
+  text-align: justify;
+}
+
+.cool {
+  color: #ccccff;
+}
+
+/* these are all the same for now, but easy to modify individually */
+#container-flyer, #container-error, #container-exp, #container-consent, #container-instructions, #container-questionnaire {
+    background: white;
+    margin: 30px;
+}
+
+/* ad.html  - the ad that people view first */
+#adlogo {
+    width: 200px;
+    padding: 2px;
+}
+
+/* consent.html - the consent form */
+.legal {
+  text-align: justify;
+  font-size: 11pt;
+  line-height: 1.1em;
+}
+
+.spacer {
+    clear: both;
+}
+
+/********************************************************************/
+/* Index slide components                                           */
+/********************************************************************/
+
+img.logo { height: 6.25em; }
+
+#consent {
+    padding-left: 4%;
+    padding-right: 4%;
+    margin: 1.5em 0;
+    text-align: justify;
+}
+
+span.consent {
+    font-color: red;
+}
+
+/********************************************************************/
+/* Finished slide components                                        */
+/********************************************************************/
+
+#submit_error_slide {
+    display: none;
+}
+
+#resubmit_slide {
+    display: none;
+}
+
+/********************************************************************/
+/* Error                                                            */
+/********************************************************************/
+
+#error-message {
+    background-color: #FEA;
+    padding: 0 0.625em;
+    border: 1px solid black;
+    margin: 0.625em;
+}

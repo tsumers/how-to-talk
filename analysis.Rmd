@@ -1,0 +1,92 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r}
+library(dplyr)
+library(stats)
+```
+
+This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
+
+Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Cmd+Shift+Enter*. 
+
+```{r}
+posterior_rewards <- read.csv("~/src/ird-bandits/utterance_posterior_rewards.csv")
+```
+
+#### Latent-horizon comparisons
+```{r}
+#### versus Known H
+res <- t.test(posterior_rewards$pragmatic_uncertain, posterior_rewards$pragmatic_aligned, paired = TRUE)
+res
+
+#### versus H=4
+res <- t.test(posterior_rewards$pragmatic_uncertain, posterior_rewards$pragmatic_pedagogic, paired = TRUE)
+res
+
+#### versus H=1
+res <- t.test(posterior_rewards$pragmatic_uncertain, posterior_rewards$pragmatic_conservative, paired = TRUE)
+res
+
+#### versus literal
+res <- t.test(posterior_rewards$pragmatic_uncertain, posterior_rewards$literal, paired = TRUE)
+res
+```
+
+#### Literal comparisons
+```{r}
+#### versus Known H
+res <- t.test(posterior_rewards$literal, posterior_rewards$pragmatic_aligned, paired = TRUE)
+res
+
+#### versus H=4
+res <- t.test(posterior_rewards$literal, posterior_rewards$pragmatic_pedagogic, paired = TRUE)
+res
+
+#### versus H=1
+res <- t.test(posterior_rewards$literal, posterior_rewards$pragmatic_conservative, paired = TRUE)
+res
+
+#### versus Latent H
+res <- t.test(posterior_rewards$literal, posterior_rewards$pragmatic_uncertain, paired = TRUE)
+res
+```
+
+```{r}
+utterances <- read.csv("~/src/ird-bandits/utterance_counts_for_r.csv")
+one_to_two <- subset(utterances, horizon %in% c(1, 2))
+utterance_table <- table(one_to_two$horizon, one_to_two$utterance_for_r)
+test <- chisq.test(utterance_table)
+test
+```
+```{r}
+two_to_four <- subset(utterances, horizon %in% c(2, 4))
+utterance_table <- table(two_to_four$horizon, two_to_four$utterance_for_r)
+test <- chisq.test(utterance_table)
+test
+```
+
+```{r}
+library(lme4)
+library(lmerTest)
+library(tidyverse)
+library(xtable)
+library(broom.mixed)
+regret_results <- read.csv("~/src/ird-bandits/regret_results_for_r.csv")
+```
+
+```{r}
+regret_results <- regret_results %>%
+  mutate(listener = fct_relevel(listener, 'pragmatic_uncertain'))
+```
+
+```{r}
+model <- lmer(regret ~ listener + (1 | random_effects_key), 
+              data = regret_results)
+```
+```{r}
+summary(model)
+## xtable(tidy(model))
+```
