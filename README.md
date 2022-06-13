@@ -31,7 +31,7 @@ Run tests (from the main directory):
 
 Then you can launch a jupyter server to run the provided notebooks.
 
-Note that the analysis caches pragmatic inference in order to speed up the analysis. Running it for the first time can take several hours, but the cache is too large to include in the supplemental zip file. The raw data can be instead downloaded at the following link
+Note that the analysis caches pragmatic inference in order to speed up the analysis. Running it for the first time can take several hours. The raw data can be instead downloaded at the following link:
 
 https://www.dropbox.com/s/j03e2yuj5h40vi9/neurips_supplement_data.zip?dl=0
 
@@ -41,7 +41,7 @@ The two folders, `cached_inference` and `cached_thompson_sampling`, should then 
 
 The easiest way to look at the behavioral experiment is to visit the hosted version: http://pragmatic-bandits.herokuapp.com/. 
 
-For completeness, the full (anonymized) JavaScript code is also provided.
+The full JavaScript code is provided for inspection.
 
 ## R analysis
 
