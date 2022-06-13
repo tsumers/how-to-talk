@@ -1,4 +1,4 @@
-## How to talk so your robot will Learn: Instructions, descriptions, and pragmatics
+## How to talk so your robot will learn: Instructions, descriptions, and pragmatics
 
 <img align="right" src="https://github.com/tsumers/how-to-talk/blob/2ebd327f2e76b10341e380bccfe196095faf9757/Javascript-Experiment/static/images/mushroom-picker.jpg" width="500">
 
