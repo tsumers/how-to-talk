@@ -29,7 +29,9 @@ Note that the analysis caches pragmatic inference in order to speed up the analy
 
 The easiest way to look at the behavioral experiment is to visit the hosted version: http://pragmatic-bandits.herokuapp.com/. 
 
-The full JavaScript code is provided for inspection.
+The app is hosted on free dynos, so it will take 5-10 seconds to load the first time.
+
+The full JavaScript code is provided in the repo.
 
 #### R analysis
 
