@@ -10,10 +10,7 @@ There are three codebases for this project: the analysis code (a Python reposito
 
 The easiest way to explore the code is to look at the provided Jupyter Notebooks (`.pdf` versions are included for convenience). 
 
-These consist of:  
-`Speakers-and-Listeners`: the main notebook used to run the speaker / listener models; contains most of the analyses.  
-`Experiment-Analysis`: loads the results from the behavioral experiment and visualizes participant utterance choices.  
-`Social-and-Reinforcment-Learning`: used for the Thompson Sampling integration.  
+`Speakers-and-Listeners` is used to run the speaker / listener models and contains most of the analyses. `Experiment-Analysis` loads the results from the behavioral experiment and visualizes participant utterance choices.  Finally, `Social-and-Reinforcment-Learning` is used for the Thompson Sampling integration.  
 
 #### Running the code
 Install the environment via Conda:
